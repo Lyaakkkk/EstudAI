@@ -20,6 +20,10 @@ services:
         value: "1"
       - key: AI_ENABLED
         value: "false"
+      - key: AI_ACCESS_MODE
+        value: validation
+      - key: AI_VALIDATION_TOKEN_SHA256
+        value: ""
       - key: AI_QUOTA_STORE
         value: upstash
       - key: AI_QUOTA_KEY

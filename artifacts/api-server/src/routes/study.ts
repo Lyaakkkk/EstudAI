@@ -1,4 +1,5 @@
 import { AiUsageError, getAiGuardStatus } from '../lib/ai-guard';
+import { aiGenerationRoutes, createAiAccessGate } from '../lib/ai-access';
 import {
   Router,
   type IRouter,
@@ -117,6 +118,9 @@ router.get("/study/ai-status", (_req, res): void => {
     }),
   );
 });
+
+// Express applies the same case/trailing-slash matching as the generation handlers.
+router.post(aiGenerationRoutes, createAiAccessGate());
 
 router.use("/study", (req, res, next): void => {
   if (req.method !== 'POST' || !['/chat', '/summaries', '/quizzes', '/challenges', '/challenges/grade'].includes(req.path)) { next(); return; }

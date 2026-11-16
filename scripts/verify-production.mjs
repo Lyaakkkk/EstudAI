@@ -6,7 +6,7 @@ const port = 19315;
 const base = 'http://127.0.0.1:' + port;
 const child = spawn(process.execPath, ['artifacts/api-server/dist/index.mjs'], {
   env: { ...process.env, NODE_ENV: 'production', PORT: String(port), SERVE_WEB: 'true', TRUST_PROXY_HOPS: '0',
-    GEMINI_API_KEY: '', AI_ENABLED: 'false', AI_QUOTA_STORE: 'upstash', AI_BUDGET_FILE: '', UPSTASH_REDIS_REST_URL: '', UPSTASH_REDIS_REST_TOKEN: '' },
+    GEMINI_API_KEY: '', AI_ENABLED: 'false', AI_ACCESS_MODE: 'public', AI_QUOTA_STORE: 'upstash', AI_BUDGET_FILE: '', UPSTASH_REDIS_REST_URL: '', UPSTASH_REDIS_REST_TOKEN: '' },
   stdio: ['ignore', 'pipe', 'pipe'],
 });
 let output = ''; child.stdout.on('data', data => { output += data; }); child.stderr.on('data', data => { output += data; });

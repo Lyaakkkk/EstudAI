@@ -31,7 +31,7 @@ async function start(enabled = true) {
   child = fork('artifacts/api-server/dist/index.mjs', [], {
     execArgv: ['--import', pathToFileURL(path.resolve('scripts/tests/mission18-preload.mjs')).href],
     env: { ...process.env, NODE_ENV: 'production', PORT: '19318', SERVE_WEB: 'false', TRUST_PROXY_HOPS: '0',
-      AI_ENABLED: String(enabled), AI_QUOTA_STORE: 'upstash', AI_QUOTA_KEY: key,
+      AI_ENABLED: String(enabled), AI_ACCESS_MODE: 'public', AI_QUOTA_STORE: 'upstash', AI_QUOTA_KEY: key,
       UPSTASH_REDIS_REST_URL: 'https://mission18-test.upstash.io', UPSTASH_REDIS_REST_TOKEN: 'FAKE_TOKEN', GEMINI_API_KEY: 'FAKE_KEY',
       AI_DAILY_PROVIDER_LIMIT: '20', AI_DAILY_INPUT_BYTES: '8388608', AI_DAILY_OUTPUT_TOKENS: '65536', AI_PROVIDER_WINDOW_LIMIT: '6', AI_MAX_CONCURRENT: '1' },
     stdio: ['ignore', 'ignore', 'pipe', 'ipc'],

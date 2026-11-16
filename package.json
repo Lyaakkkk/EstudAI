@@ -13,7 +13,8 @@
     "verify:production": "node scripts/verify-production.mjs",
     "test:security": "node scripts/test-ai-security.mjs",
     "test:mission18": "node scripts/test-mission18.mjs && node scripts/tests/mission18-frontend.mjs",
-    "test:web-startup": "node scripts/test-web-startup.mjs"
+    "test:web-startup": "node scripts/test-web-startup.mjs",
+    "test:ai-access": "node scripts/test-ai-access.mjs"
   },
   "private": true,
   "dependencies": {

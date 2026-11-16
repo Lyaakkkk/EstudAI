@@ -12,7 +12,8 @@
     "start:web-api": "node --enable-source-maps artifacts/api-server/dist/index.mjs",
     "verify:production": "node scripts/verify-production.mjs",
     "test:security": "node scripts/test-ai-security.mjs",
-    "test:mission18": "node scripts/test-mission18.mjs && node scripts/tests/mission18-frontend.mjs"
+    "test:mission18": "node scripts/test-mission18.mjs && node scripts/tests/mission18-frontend.mjs",
+    "test:web-startup": "node scripts/test-web-startup.mjs"
   },
   "private": true,
   "dependencies": {

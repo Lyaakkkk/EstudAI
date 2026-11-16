@@ -1,0 +1,18 @@
+{
+  "officialSvgUnchanged": true,
+  "svgBackgroundElements": 0,
+  "allAppCodeOutsideAppFrameUnchanged": true,
+  "colors": {
+    "background": "#F8FAFC",
+    "brand": "#1E40AF",
+    "detail": "#8B5CF6",
+    "active": "#DBEAFE",
+    "secondary": "#64748B"
+  },
+  "contrast": {
+    "brandOnSidebar": 8.34,
+    "brandOnActive": 7.15,
+    "secondaryOnSidebar": 4.55
+  },
+  "browserVisualCheck": "Not performed; browser automation unavailable in this session."
+}

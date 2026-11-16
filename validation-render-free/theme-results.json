@@ -1,0 +1,61 @@
+{
+  "scope": "Actual bootstrap and theme store executed in VM with simulated DOM, media queries, storage and events. No browser rendering.",
+  "results": [
+    {
+      "name": "Bootstrap and store agree: preference null, system dark true",
+      "passed": true
+    },
+    {
+      "name": "Bootstrap and store agree: preference null, system dark false",
+      "passed": true
+    },
+    {
+      "name": "Bootstrap and store agree: preference system, system dark true",
+      "passed": true
+    },
+    {
+      "name": "Bootstrap and store agree: preference dark, system dark false",
+      "passed": true
+    },
+    {
+      "name": "Bootstrap and store agree: preference light, system dark true",
+      "passed": true
+    },
+    {
+      "name": "Bootstrap and store agree: preference invalid, system dark true",
+      "passed": true
+    },
+    {
+      "name": "System follows live OS changes with one listener shared by selectors",
+      "passed": true
+    },
+    {
+      "name": "Explicit light persists and overrides OS",
+      "passed": true
+    },
+    {
+      "name": "Explicit dark restores on reload",
+      "passed": true
+    },
+    {
+      "name": "Favicon follows resolved explicit dark theme",
+      "passed": true
+    },
+    {
+      "name": "Choosing System resumes live OS updates and persists preference",
+      "passed": true
+    },
+    {
+      "name": "Cross-tab changes and removal synchronize",
+      "passed": true
+    },
+    {
+      "name": "Subscriptions are cleaned up after last selector",
+      "passed": true
+    },
+    {
+      "name": "Blocked storage still follows system at startup and applies manual choice in memory",
+      "passed": true
+    }
+  ]
+}

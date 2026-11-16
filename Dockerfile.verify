@@ -1,0 +1,10 @@
+﻿# Build-only Linux validation image. Never contains a local .env or user data.
+FROM node:26.13.0-bookworm-slim
+WORKDIR /app
+RUN npm install --global pnpm@12.18.0
+COPY . .
+RUN pnpm install --frozen-lockfile --prod=false
+RUN pnpm run build:web-api
+RUN pnpm run test:security
+RUN node scripts/verify-production.mjs
+CMD ["node", "scripts/verify-production.mjs"]

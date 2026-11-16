@@ -1,0 +1,440 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: study
+    description: EstudAI study tools
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /study/ai-status:
+    get:
+      operationId: getStudyAiStatus
+      tags: [study]
+      summary: Check whether Gemini is configured
+      responses:
+        "200":
+          description: AI provider configuration status
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiStatus"
+  /study/summaries:
+    post:
+      operationId: generateStudySummary
+      tags: [study]
+      summary: Generate a didactic summary from study material
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudyGenerationRequest"
+      responses:
+        "200":
+          description: Generated study summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudySummary"
+        "413":
+          description: Request body exceeds the upload limit
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "429":
+          description: Per-client rate or global usage limit reached
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "503":
+          description: Gemini is not configured, busy, or usage ledger unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "502":
+          description: Gemini could not generate a valid response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+  /study/quizzes:
+    post:
+      operationId: generateStudyQuiz
+      tags: [study]
+      summary: Generate a quiz from study material
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudyQuizRequest"
+      responses:
+        "200":
+          description: Generated quiz and answer key
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyQuiz"
+        "413":
+          description: Request body exceeds the upload limit
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "429":
+          description: Per-client rate or global usage limit reached
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "503":
+          description: Gemini is not configured, busy, or usage ledger unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "502":
+          description: Gemini could not generate a valid response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+  /study/challenges:
+    post:
+      operationId: generateStudyChallenges
+      tags: [study]
+      summary: Generate practical challenges from study material
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudyChallengeRequest"
+      responses:
+        "200":
+          description: Generated practical challenges
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyChallengeSet"
+        "413":
+          description: Request body exceeds the upload limit
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "429":
+          description: Per-client rate or global usage limit reached
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "503":
+          description: Gemini is not configured, busy, or usage ledger unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "502":
+          description: Gemini could not generate a valid response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+  /study/challenges/grade:
+    post:
+      operationId: gradeStudyChallenge
+      tags: [study]
+      summary: Evaluate a student's practical challenge response
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudyChallengeGradeRequest"
+      responses:
+        "200":
+          description: AI evaluation of the student's answer
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyChallengeGrade"
+        "413":
+          description: Request body exceeds the upload limit
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "429":
+          description: Per-client rate or global usage limit reached
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "503":
+          description: Gemini is not configured, busy, or usage ledger unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "502":
+          description: Gemini could not evaluate the response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+        "422":
+          description: The material does not support a safe evaluation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAiError"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    StudyDifficulty:
+      type: string
+      enum: [iniciante, intermediario, avancado]
+    StudyAiStatus:
+      type: object
+      properties:
+        configured:
+          type: boolean
+        provider:
+          type: string
+          enum: [gemini]
+        message:
+          type: string
+      required: [configured, provider, message]
+    StudyAiError:
+      type: object
+      properties:
+        code:
+          type: string
+          enum: [AI_DISABLED, AI_NOT_CONFIGURED, AI_PROVIDER_ERROR, INVALID_AI_RESPONSE, AI_BUSY, AI_WINDOW_LIMIT, AI_DAILY_LIMIT, AI_BUDGET_UNAVAILABLE, RATE_LIMITED, PAYLOAD_TOO_LARGE, INVALID_JSON, INTERNAL_ERROR, NOT_FOUND]
+        message:
+          type: string
+      required: [code, message]
+    StudySource:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+        text:
+          type: string
+          maxLength: 100000
+        file:
+          type: object
+          properties:
+            name:
+              type: string
+              maxLength: 255
+            mimeType:
+              type: string
+              enum: [application/pdf, image/jpeg, image/png, image/webp]
+            base64:
+              type: string
+              maxLength: 2796204
+          required: [name, mimeType, base64]
+      required: [title]
+    StudyGenerationRequest:
+      allOf:
+        - $ref: "#/components/schemas/StudySource"
+        - type: object
+          properties:
+            difficulty:
+              $ref: "#/components/schemas/StudyDifficulty"
+          required: [difficulty]
+    StudyQuizRequest:
+      allOf:
+        - $ref: "#/components/schemas/StudySource"
+        - type: object
+          properties:
+            difficulty:
+              $ref: "#/components/schemas/StudyDifficulty"
+            questionCount:
+              type: integer
+              minimum: 5
+              maximum: 10
+          required: [difficulty, questionCount]
+    StudyChallengeRequest:
+      allOf:
+        - $ref: "#/components/schemas/StudySource"
+        - type: object
+          properties:
+            difficulty:
+              $ref: "#/components/schemas/StudyDifficulty"
+            challengeType:
+              type: string
+              enum: [logica, programacao, resolucao-de-problemas]
+          required: [difficulty, challengeType]
+    StudySummarySection:
+      type: object
+      properties:
+        heading:
+          type: string
+        explanation:
+          type: string
+      required: [heading, explanation]
+    StudyKeyTerm:
+      type: object
+      properties:
+        term:
+          type: string
+        definition:
+          type: string
+      required: [term, definition]
+    StudySummary:
+      type: object
+      properties:
+        title:
+          type: string
+        overview:
+          type: string
+        sections:
+          type: array
+          items:
+            $ref: "#/components/schemas/StudySummarySection"
+        keyTerms:
+          type: array
+          items:
+            $ref: "#/components/schemas/StudyKeyTerm"
+        reviewTopics:
+          type: array
+          items:
+            type: string
+      required: [title, overview, sections, keyTerms, reviewTopics]
+    StudyQuizQuestion:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [multipla-escolha, verdadeiro-ou-falso]
+        prompt:
+          type: string
+        options:
+          type: array
+          items:
+            type: string
+        correctAnswer:
+          type: string
+        explanation:
+          type: string
+        topic:
+          type: string
+      required: [id, type, prompt, options, correctAnswer, explanation, topic]
+    StudyQuiz:
+      type: object
+      properties:
+        title:
+          type: string
+        questions:
+          type: array
+          minItems: 5
+          items:
+            $ref: "#/components/schemas/StudyQuizQuestion"
+      required: [title, questions]
+    StudyChallenge:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        type:
+          type: string
+          enum: [logica, programacao, resolucao-de-problemas]
+        prompt:
+          type: string
+        rubric:
+          type: array
+          items:
+            type: string
+        expectedAnswer:
+          type: string
+        topic:
+          type: string
+      required: [id, title, type, prompt, rubric, expectedAnswer, topic]
+    StudyChallengeSet:
+      type: object
+      properties:
+        title:
+          type: string
+        challenges:
+          type: array
+          minItems: 1
+          items:
+            $ref: "#/components/schemas/StudyChallenge"
+      required: [title, challenges]
+    StudyChallengeGradeRequest:
+      allOf:
+        - $ref: "#/components/schemas/StudySource"
+        - type: object
+          properties:
+            difficulty:
+              $ref: "#/components/schemas/StudyDifficulty"
+            challenge:
+              $ref: "#/components/schemas/StudyChallenge"
+            answer:
+              type: string
+              minLength: 1
+              maxLength: 12000
+          required: [difficulty, challenge, answer]
+    StudyChallengeGrade:
+      type: object
+      properties:
+        score:
+          type: integer
+          minimum: 0
+          maximum: 100
+        evaluation:
+          type: string
+        strengths:
+          type: array
+          items:
+            type: string
+        improvements:
+          type: array
+          items:
+            type: string
+        expectedAnswer:
+          type: string
+        topicsToReview:
+          type: array
+          items:
+            type: string
+      required: [score, evaluation, strengths, improvements, expectedAnswer, topicsToReview]
+

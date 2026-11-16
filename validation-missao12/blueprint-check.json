@@ -1,0 +1,9 @@
+{
+  "yamlParsed": true,
+  "serviceCount": 1,
+  "autoDeployOff": true,
+  "secretIsPrompt": true,
+  "build": "npx --yes pnpm@12.18.0 install --frozen-lockfile --prod=false && npx --yes pnpm@12.18.0 run build:web-api",
+  "start": "node --enable-source-maps artifacts/api-server/dist/index.mjs",
+  "scope": "Local parsing and required-field assertions; not a Render API validation."
+}

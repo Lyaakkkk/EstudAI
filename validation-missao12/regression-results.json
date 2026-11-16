@@ -1,0 +1,109 @@
+{
+  "scope": "Provedor simulado apenas nestes testes de falha. API Express, mutationFn e MutationObserver reais; sem navegador ou localStorage. Nenhuma chave real utilizada.",
+  "results": [
+    {
+      "name": "503 seguido de sucesso - resumo",
+      "status": 200,
+      "calls": 2,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "503 persistente - quiz",
+      "status": 502,
+      "code": "AI_PROVIDER_ERROR",
+      "message": "A geração falhou: O Gemini está temporariamente indisponível. Aguarde um pouco e clique em Gerar novamente. Nenhum resultado foi salvo.",
+      "calls": 2,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "reenvio manual apos falha - quiz",
+      "status": 200,
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "quota sem repeticao automatica",
+      "status": 502,
+      "code": "AI_PROVIDER_ERROR",
+      "message": "A geração falhou: O limite de solicitações do Gemini foi atingido. Aguarde antes de tentar novamente. Nenhum resultado foi salvo.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "autenticacao sem repeticao automatica",
+      "status": 502,
+      "code": "AI_PROVIDER_ERROR",
+      "message": "A geração falhou: O Gemini recusou as credenciais do servidor. A configuração precisa ser verificada pelo responsável. Nenhum resultado foi salvo.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "modelo ausente sem repeticao automatica",
+      "status": 502,
+      "code": "AI_PROVIDER_ERROR",
+      "message": "A geração falhou: O modelo configurado do Gemini não está disponível. A configuração precisa ser verificada pelo responsável. Nenhum resultado foi salvo.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "resumo incompleto bloqueado",
+      "status": 502,
+      "code": "INVALID_AI_RESPONSE",
+      "message": "A geração falhou: A IA não retornou um resultado que possa ser usado. Nenhum resultado foi salvo; tente novamente.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "quiz com gabarito ausente bloqueado",
+      "status": 502,
+      "code": "INVALID_AI_RESPONSE",
+      "message": "A geração falhou: A IA não retornou um resultado que possa ser usado. Nenhum resultado foi salvo; tente novamente.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "quiz com quantidade incorreta bloqueado",
+      "status": 502,
+      "code": "INVALID_AI_RESPONSE",
+      "message": "A geração falhou: A IA não retornou um resultado que possa ser usado. Nenhum resultado foi salvo; tente novamente.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "resumo sem campo obrigatorio bloqueado",
+      "status": 502,
+      "code": "INVALID_AI_RESPONSE",
+      "message": "A geração falhou: A IA não retornou um resultado que possa ser usado. Nenhum resultado foi salvo; tente novamente.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "quiz com ids duplicados bloqueado",
+      "status": 502,
+      "code": "INVALID_AI_RESPONSE",
+      "message": "A geração falhou: A IA não retornou um resultado que possa ser usado. Nenhum resultado foi salvo; tente novamente.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    },
+    {
+      "name": "timeout com mensagem especifica",
+      "status": 502,
+      "code": "AI_PROVIDER_ERROR",
+      "message": "A geração falhou: O Gemini demorou mais de 60 segundos para responder. Tente gerar novamente. Nenhum resultado foi salvo.",
+      "calls": 1,
+      "historyPreserved": true,
+      "passed": true
+    }
+  ]
+}

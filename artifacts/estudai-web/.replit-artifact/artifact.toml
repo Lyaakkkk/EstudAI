@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "EstudAI – Assistente de Estudos"
+description = "Aplicativo web em português do Brasil para organizar materiais de estudo, gerar resumos, quizzes e desafios com IA Gemini configurável, e acompanhar o desempenho sem resultados fictícios."
+version = "1.0.0"
+id = "artifacts/estudai-web"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19006
+
+[services.development]
+run = "pnpm --filter @workspace/estudai-web run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/estudai-web", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/estudai-web/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19006"
+BASE_PATH = "/"

@@ -1,0 +1,21 @@
+{
+  "scope": "Gemini real, mutationFn gerada e MutationObserver reais, via proxy Vite. Sem automação visual e sem histórico do navegador.",
+  "results": [
+    {
+      "name": "resumo",
+      "status": 502,
+      "errorName": "ApiError",
+      "message": "O Gemini está temporariamente indisponível. Aguarde um pouco e clique em Gerar novamente. Nenhum resultado foi salvo.",
+      "code": "AI_PROVIDER_ERROR",
+      "elapsedMs": 2376
+    },
+    {
+      "name": "quiz",
+      "status": 502,
+      "errorName": "ApiError",
+      "message": "O Gemini está temporariamente indisponível. Aguarde um pouco e clique em Gerar novamente. Nenhum resultado foi salvo.",
+      "code": "AI_PROVIDER_ERROR",
+      "elapsedMs": 2196
+    }
+  ]
+}

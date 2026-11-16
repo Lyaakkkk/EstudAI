@@ -1,0 +1,24 @@
+{
+  "routes": [
+    "/",
+    "/chat",
+    "/materiais",
+    "/resumos",
+    "/quizzes",
+    "/desafios",
+    "/desempenho"
+  ],
+  "studyComponentsUnchanged": true,
+  "chatSessionOutsideRouteSwitch": true,
+  "brandLogoSha256": "346fac576e09a1a22d0b7ad9e2dcbb7c9db9050a58c01f1e194ac5a7c668a722",
+  "backendSourceChanges": [],
+  "productionFilesChanged": [
+    "artifacts/estudai-web/src/App.tsx",
+    "artifacts/estudai-web/src/pages/chat.tsx",
+    "artifacts/estudai-web/src/index.css"
+  ],
+  "browser": {
+    "available": false,
+    "error": "The browser access host is unavailable"
+  }
+}

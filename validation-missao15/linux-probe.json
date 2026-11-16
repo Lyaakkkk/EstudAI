@@ -1,0 +1,14 @@
+{
+  "hostPlatform": "win32",
+  "node": "v26.13.0",
+  "wsl": {
+    "exitCode": 1,
+    "linuxKernelConfirmed": false,
+    "output": "Copyright (c) Microsoft Corporation. Todos os direitos reservados.\r\r\n\r\r\nUso: wsl.exe [Argument]\r\r\n\r\r\nArgumentos:\r\r\n\r\r\n    --install <Options>\r\r\n        Instala os recursos do Subsistema do Windows para Linux. Se nenhuma opção for especificada,\r\r\n        os recursos recomendados serão instalados junto com a distribuição padrão.\r\r\n\r\r\n        Para exibir a distribuição padrão, bem como uma lista de outras distribuições válidas,\r\r\n        use 'wsl --list --online'.\r\r\n\r\r\n        Opções:\r\r\n            --distribution, -d [Argument]\r\r\n                Especifica a distribuição a ser baixada e instalada por nome.\r\r\n\r\r\n                Argumentos:\r\r\n                    Um nome de distribuição válido (não diferencia maiúsculas de minúsculas).\r\r\n\r\r\n                Exemplos:\r\r\n                    wsl --install -d Ubuntu\r\r\n                    wsl --install --distribution Debian\r\r\n\r\r\n            --inbox\r\r\n                Instale o recurso opcional do Windows em vez da versão disponível na Microsoft Sto"
+  },
+  "docker": {
+    "exitCode": null,
+    "error": "ENOENT"
+  },
+  "cleanLinuxInstall": "NOT_EXECUTED: no usable Linux runtime. Dockerfile.verify prepared, not built."
+}

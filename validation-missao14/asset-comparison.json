@@ -1,0 +1,35 @@
+{
+  "comparison": [
+    {
+      "resource": "estudai-logo",
+      "lightIdenticalToOriginal": true,
+      "darkChangesOnlyFillAndStopColor": true,
+      "paths": 35,
+      "gradients": 34,
+      "backgroundElements": 0
+    },
+    {
+      "resource": "estudai-sparkle",
+      "lightIdenticalToOriginal": true,
+      "darkChangesOnlyFillAndStopColor": true,
+      "paths": 2,
+      "gradients": 34,
+      "backgroundElements": 0
+    }
+  ],
+  "contrast": {
+    "lightSidebarText": 8.34,
+    "lightSidebarSecondary": 4.55,
+    "darkSidebarText": 9.9,
+    "darkSidebarSecondary": 8.49,
+    "darkSidebarActiveText": 6.38,
+    "darkControlText": 7.16,
+    "darkLogoMinimum": 6.17
+  },
+  "originalLogoUnchanged": true,
+  "chatUnchanged": true,
+  "geminiUnchanged": true,
+  "studyRoutesUnchanged": true,
+  "homeAndStudyPagesUnchanged": true,
+  "scope": "Exact byte/attribute comparison and mathematical contrast; not rendered UI approval."
+}

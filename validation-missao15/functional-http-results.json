@@ -1,0 +1,100 @@
+{
+  "scope": "Real Gemini via production HTTP; fictional material, no browser or user storage.",
+  "results": [
+    {
+      "name": "PDF summary",
+      "status": 200,
+      "elapsedMs": 9484,
+      "data": {
+        "title": "Resumo do Jardim Fictício Aurora",
+        "overview": "Este resumo apresenta as informações sobre o número de vasos e o volume diário de água utilizado no Jardim fictício Aurora.",
+        "sections": [
+          {
+            "heading": "Quantidade de Vasos",
+            "explanation": "O Jardim fictício Aurora conta com um total de 12 vasos."
+          },
+          {
+            "heading": "Rega Diária",
+            "explanation": "Cada um dos vasos do jardim é regado com 200 ml de água todos os dias."
+          }
+        ],
+        "keyTerms": [
+          {
+            "term": "Jardim fictício Aurora",
+            "definition": "Nome do jardim citado no material de estudo que contém 12 vasos."
+          },
+          {
+            "term": "Vaso",
+            "definition": "Recipiente individual do jardim que comporta uma planta e recebe água diariamente."
+          },
+          {
+            "term": "200 ml de água",
+            "definition": "Quantidade exata de água destinada diariamente a cada vaso."
+          }
+        ],
+        "reviewTopics": [
+          "Quantidade total de vasos no Jardim fictício Aurora",
+          "Volume de água recebido por cada vaso diariamente"
+        ]
+      }
+    },
+    {
+      "name": "Challenges",
+      "status": 200,
+      "elapsedMs": 16792,
+      "data": {
+        "title": "Desafios Práticos - Jardim Aurora",
+        "challenges": [
+          {
+            "id": "desafio-1",
+            "title": "Cálculo do Consumo Diário de Água",
+            "type": "resolucao-de-problemas",
+            "prompt": "No contexto de jardinagem, a rega diária consiste na distribuição de água para as plantas. No Jardim Aurora, existem 12 vasos e cada vaso necessita de 200 ml de água por dia. Resolva o problema de determinar a quantidade total de água consumida diariamente por todos os vasos, explicando a operação matemática realizada.",
+            "rubric": [
+              "Identificar o número total de vasos (12 vasos).",
+              "Identificar o volume individual de água por vaso (200 ml).",
+              "Calcular corretamente a multiplicação (12 x 200 ml = 2400 ml)."
+            ],
+            "expectedAnswer": "Multiplica-se a quantidade de vasos (12) pelo volume de água diário de cada vaso (200 ml): 12 x 200 ml = 2400 ml de água no total por dia.",
+            "topic": "Cálculo de Rega Diária"
+          },
+          {
+            "id": "desafio-2",
+            "title": "Organização do Registro e Exposição à Luz",
+            "type": "resolucao-de-problemas",
+            "prompt": "Um controle adequado de jardim utiliza uma tabela de registro, que é um instrumento para anotar as rotinas diárias. Resolva o problema de estruturar as informações que devem constar no registro diário do Jardim Aurora, identificando o volume total de água a ser anotado e o período exato do dia em que os 12 vasos devem receber luz solar.",
+            "rubric": [
+              "Identificar a função da tabela para registrar a rega diária.",
+              "Mencionar o volume total diário de 2400 ml (ou 200 ml por vaso).",
+              "Especificar o período da manhã para o recebimento de luz."
+            ],
+            "expectedAnswer": "A tabela deve registrar a rega diária cobrindo os 12 vasos com 200 ml cada, resultando em 2400 ml no total. Além disso, o registro deve confirmar que os vasos recebem luz no período da manhã.",
+            "topic": "Gestão e Registro de Rotina do Jardim"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Challenge grade",
+      "status": 200,
+      "elapsedMs": 15917,
+      "data": {
+        "score": 100,
+        "evaluation": "Você cumpriu perfeitamente todos os critérios do desafio! Identificou a quantidade total de vasos (12), o volume individual que cada vaso precisa (200 ml) e realizou a operação de multiplicação corretamente, resultando em 2400 ml (ou 2,4 litros). A multiplicação é a operação matemática usada para somar parcelas iguais repetidas vezes — neste caso, somar 200 ml doze vezes.",
+        "strengths": [
+          "Identificou corretamente o número total de vasos (12 vasos).",
+          "Identificou o volume individual de água necessário por vaso (200 ml).",
+          "Efetuou a multiplicação de forma exata (12 x 200 ml = 2400 ml) e ainda apresentou a conversão correta para litros (2,4 L)."
+        ],
+        "improvements": [
+          "Para focar exclusivamente na resolução do problema matemático, você pode omitir informações extras sobre iluminação ou registro, embora estejam corretas de acordo com o material de apoio."
+        ],
+        "expectedAnswer": "Multiplica-se a quantidade de vasos (12) pelo volume de água diário de cada vaso (200 ml): 12 x 200 ml = 2400 ml de água no total por dia (equivalente a 2,4 litros).",
+        "topicsToReview": [
+          "Operação de Multiplicação",
+          "Conversão de Unidades de Medida (Mililitros para Litros)"
+        ]
+      }
+    }
+  ]
+}

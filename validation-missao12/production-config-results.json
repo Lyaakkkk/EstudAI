@@ -1,0 +1,33 @@
+{
+  "scope": "Local HTTP tests of deployment configuration. Not a Render ingress test; CORS is not authentication.",
+  "results": [
+    {
+      "name": "same-origin default",
+      "passed": true
+    },
+    {
+      "name": "allowed origin and one trusted hop",
+      "passed": true
+    },
+    {
+      "name": "disallowed origin",
+      "passed": true
+    },
+    {
+      "name": "reject invalid TRUST_PROXY_HOPS true",
+      "passed": true
+    },
+    {
+      "name": "reject invalid TRUST_PROXY_HOPS -1",
+      "passed": true
+    },
+    {
+      "name": "reject invalid TRUST_PROXY_HOPS 11",
+      "passed": true
+    },
+    {
+      "name": "reject invalid TRUST_PROXY_HOPS 1.5",
+      "passed": true
+    }
+  ]
+}

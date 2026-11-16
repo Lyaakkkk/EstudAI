@@ -1,0 +1,11 @@
+{
+  "originalLogoUnchanged": true,
+  "chatSourceUnchanged": true,
+  "homeAndStudyFunctionsUnchanged": true,
+  "generatedFilesChanged": [
+    "lib\\api-client-react\\src\\generated\\api.schemas.ts",
+    "lib\\api-zod\\src\\generated\\api.ts",
+    "lib\\api-zod\\src\\generated\\types\\studyAiErrorCode.ts",
+    "lib\\api-zod\\src\\generated\\types\\studySourceFile.ts"
+  ]
+}

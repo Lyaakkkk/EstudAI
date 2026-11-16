@@ -1,0 +1,9 @@
+{
+  "test": "imagem via API - segunda e ultima tentativa",
+  "status": 502,
+  "elapsedMs": 60181,
+  "data": {
+    "code": "AI_PROVIDER_ERROR",
+    "message": "Não foi possível acessar o Gemini. Nenhum resultado foi salvo; tente novamente mais tarde."
+  }
+}

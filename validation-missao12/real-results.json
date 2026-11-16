@@ -1,0 +1,120 @@
+{
+  "scope": "Gemini real, mutationFn gerada e MutationObserver reais, via Express de producao, sem Vite. Sem automação visual e sem histórico do navegador.",
+  "results": [
+    {
+      "name": "resumo",
+      "status": 200,
+      "elapsedMs": 7076,
+      "result": {
+        "title": "Resumo do Jardim Fictício Aurora",
+        "overview": "Este documento apresenta os conceitos e dados fundamentais sobre a organização, rotina de rega e controle do Jardim Fictício Aurora com base estrita no material fornecido.",
+        "sections": [
+          {
+            "heading": "Estrutura e Rega Diária",
+            "explanation": "O Jardim Aurora é formado por 12 vasos. Cada vaso tem como norma receber 200 ml de água a cada dia. Ao somar a água de todos os 12 vasos, a rega diária totaliza 2400 ml de água."
+          },
+          {
+            "heading": "Iluminação e Registro",
+            "explanation": "Os vasos do jardim recebem luz durante o período da manhã. O acompanhamento dessa rotina é feito por meio de uma tabela, que registra a rega diária."
+          }
+        ],
+        "keyTerms": [
+          {
+            "term": "Jardim Aurora",
+            "definition": "Espaço fictício composto por 12 vasos."
+          },
+          {
+            "term": "Rega diária",
+            "definition": "Aplicação de 200 ml de água por vaso a cada dia, somando 2400 ml no total."
+          },
+          {
+            "term": "Tabela de rega",
+            "definition": "Ferramenta usada para registrar a rega efetuada diariamente."
+          }
+        ],
+        "reviewTopics": [
+          "Quantidade de vasos no Jardim Aurora",
+          "Volume de água aplicado por vaso e total diário",
+          "Período de exposição à luz",
+          "Meio de registro da rega diária"
+        ]
+      }
+    },
+    {
+      "name": "quiz",
+      "status": 200,
+      "elapsedMs": 10076,
+      "result": {
+        "title": "Quiz sobre o Jardim Fictício Aurora",
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multipla-escolha",
+            "prompt": "No estudo de jardinagem, vaso é o recipiente que armazena a planta. Quantos vasos possui o Jardim Aurora?",
+            "options": [
+              "10 vasos",
+              "12 vasos",
+              "15 vasos",
+              "20 vasos"
+            ],
+            "correctAnswer": "12 vasos",
+            "explanation": "O material de estudo afirma diretamente que o jardim Aurora possui 12 vasos.",
+            "topic": "Quantidade de vasos"
+          },
+          {
+            "id": "q2",
+            "type": "multipla-escolha",
+            "prompt": "A rega é o ato de molhar as plantas. Quantos mililitros (ml) de água cada vaso recebe por dia no Jardim Aurora?",
+            "options": [
+              "100 ml",
+              "200 ml",
+              "300 ml",
+              "2400 ml"
+            ],
+            "correctAnswer": "200 ml",
+            "explanation": "O texto especifica que cada vaso recebe 200 ml de água por dia.",
+            "topic": "Quantidade de água por vaso"
+          },
+          {
+            "id": "q3",
+            "type": "verdadeiro-ou-falso",
+            "prompt": "O volume total de rega é a soma da água fornecida a todos os vasos. O total de água recebido diariamente pelos vasos é de 2400 ml.",
+            "options": [
+              "Verdadeiro",
+              "Falso"
+            ],
+            "correctAnswer": "Verdadeiro",
+            "explanation": "De acordo com o texto fornecido, a rega diária dos vasos totaliza 2400 ml.",
+            "topic": "Volume total de água"
+          },
+          {
+            "id": "q4",
+            "type": "verdadeiro-ou-falso",
+            "prompt": "A iluminação é a exposição solar que as plantas recebem. Os vasos do Jardim Aurora recebem luz pela tarde.",
+            "options": [
+              "Verdadeiro",
+              "Falso"
+            ],
+            "correctAnswer": "Falso",
+            "explanation": "O material de estudo informa que os vasos recebem luz pela manhã.",
+            "topic": "Período de iluminação"
+          },
+          {
+            "id": "q5",
+            "type": "multipla-escolha",
+            "prompt": "O registro é a anotação das tarefas realizadas. O que é utilizado para registrar a rega diária no Jardim Aurora?",
+            "options": [
+              "Uma tabela",
+              "Um caderno",
+              "Um aplicativo",
+              "Um relógio"
+            ],
+            "correctAnswer": "Uma tabela",
+            "explanation": "O texto afirma expressamente que uma tabela registra a rega diária.",
+            "topic": "Registro de rega"
+          }
+        ]
+      }
+    }
+  ]
+}

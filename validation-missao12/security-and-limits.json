@@ -1,0 +1,32 @@
+{
+  "envPatternsAdded": true,
+  "keyConfigured": true,
+  "keyAbsentFromWebBundle": true,
+  "noEnvFilesInPublic": true,
+  "geminiSourceUnchanged": "5f78bb849a3b2d7eb0cb16230bc6fafb19639071e31b5fa3d9b0e29ca6daadf2",
+  "studyRoutesUnchanged": "32af219b035fbfc8a41f2684c8e92323d7777bc7fbbb66b21a274b8dedd80b98",
+  "localNode": "v26.13.0",
+  "installNotRun": true,
+  "browser": {
+    "available": false,
+    "error": "The browser access host is unavailable",
+    "viewports": [
+      {
+        "width": 320,
+        "status": "NOT_TESTED"
+      },
+      {
+        "width": 390,
+        "status": "NOT_TESTED"
+      },
+      {
+        "width": 768,
+        "status": "NOT_TESTED"
+      },
+      {
+        "width": 1440,
+        "status": "NOT_TESTED"
+      }
+    ]
+  }
+}

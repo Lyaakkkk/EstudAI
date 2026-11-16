@@ -1,0 +1,26 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node scripts/check-package-manager.cjs",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "typecheck:libs": "tsc --build --force",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+    "typecheck:web-api": "pnpm run typecheck:libs && pnpm --filter @workspace/estudai-web run typecheck && pnpm --filter @workspace/api-server run typecheck",
+    "build:web-api": "pnpm run typecheck:web-api && pnpm --filter @workspace/estudai-web run build && pnpm --filter @workspace/api-server run build",
+    "start:web-api": "node --enable-source-maps artifacts/api-server/dist/index.mjs",
+    "verify:production": "node scripts/verify-production.mjs",
+    "test:security": "node scripts/test-ai-security.mjs",
+    "test:mission18": "node scripts/test-mission18.mjs && node scripts/tests/mission18-frontend.mjs"
+  },
+  "private": true,
+  "dependencies": {
+    "@replit/connectors-sdk": "^0.4.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "typescript": "~5.9.3"
+  },
+  "packageManager": "pnpm@12.18.0"
+}

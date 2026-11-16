@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/estudai-mobile/"
+title = "EstudAI Mobile"
+description = "Aplicativo mobile em português do Brasil para organizar textos, PDFs e imagens de estudo, consultar as seis áreas do EstudAI e acompanhar atividades salvas localmente. Geração e avaliação por Gemini ficam claramente indisponíveis até configuração posterior."
+version = "1.0.0"
+id = "artifacts/estudai-mobile"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/estudai-mobile/" ]
+localPort = 22302
+
+[services.development]
+run = "pnpm --filter @workspace/estudai-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/estudai-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/estudai-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "22302"
+BASE_PATH = "/estudai-mobile/"

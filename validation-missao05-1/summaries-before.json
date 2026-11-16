@@ -1,0 +1,9 @@
+{
+  "endpoint": "summaries",
+  "status": 502,
+  "elapsedMs": 1963,
+  "data": {
+    "code": "AI_PROVIDER_ERROR",
+    "message": "Não foi possível acessar o Gemini. Nenhum resultado foi salvo; tente novamente mais tarde."
+  }
+}

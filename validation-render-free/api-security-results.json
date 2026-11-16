@@ -1,0 +1,118 @@
+{
+  "scope": "Local Express and actual guards; provider simulated, no real key.",
+  "checks": 26,
+  "providerCalls": 4,
+  "results": [
+    {
+      "name": "Malformed JSON",
+      "status": 400,
+      "code": "INVALID_JSON"
+    },
+    {
+      "name": "Payload above 3 MiB",
+      "status": 413,
+      "code": "PAYLOAD_TOO_LARGE"
+    },
+    {
+      "name": "Text above schema limit",
+      "status": 400
+    },
+    {
+      "name": "Spoofed PDF signature",
+      "status": 400
+    },
+    {
+      "name": "File above 2 MiB",
+      "status": 400
+    },
+    {
+      "name": "Invalid base64",
+      "status": 400
+    },
+    {
+      "name": "Invalid chat role",
+      "status": 400
+    },
+    {
+      "name": "Valid text uses unchanged success contract",
+      "status": 200
+    },
+    {
+      "name": "Valid PDF accepted",
+      "status": 200
+    },
+    {
+      "name": "Provider detail and key not exposed",
+      "status": 502,
+      "code": "AI_PROVIDER_ERROR"
+    },
+    {
+      "name": "Oversized provider response rejected",
+      "status": 502,
+      "code": "INVALID_AI_RESPONSE"
+    },
+    {
+      "name": "Global daily quota response",
+      "status": 429,
+      "code": "AI_DAILY_LIMIT"
+    },
+    {
+      "name": "Ledger failure is safe",
+      "status": 503,
+      "code": "AI_BUDGET_UNAVAILABLE"
+    },
+    {
+      "name": "Per-IP generation 1",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 2",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 3",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 4",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 5",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 6",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 7",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 8",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 9",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 10",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 11",
+      "status": 400
+    },
+    {
+      "name": "Per-IP generation 12",
+      "status": 400
+    },
+    {
+      "name": "Generation request rate limit",
+      "status": 429,
+      "code": "RATE_LIMITED"
+    }
+  ]
+}

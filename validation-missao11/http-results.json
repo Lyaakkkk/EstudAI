@@ -1,0 +1,76 @@
+{
+  "scope": "HTTP local; SPA fallback 200 does not prove rendered route; real current sourceFromMaterial matches payload used by generated mutations.",
+  "sourcePayloadMatches": true,
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/chat",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/materiais",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/resumos",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/quizzes",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/desafios",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/desempenho",
+      "status": 200,
+      "contentType": "text/html"
+    },
+    {
+      "route": "/brand/estudai-logo.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/brand/estudai-symbol.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/brand/estudai-sparkle.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/favicon.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "route": "/api/study/ai-status",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "route": "/api/study/summaries",
+      "status": 400,
+      "invalidRequestRejected": true
+    },
+    {
+      "route": "/api/study/quizzes",
+      "status": 400,
+      "invalidRequestRejected": true
+    }
+  ]
+}

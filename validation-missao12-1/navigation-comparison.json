@@ -1,0 +1,15 @@
+{
+  "originalHasSidebar": true,
+  "originalRoutes": [
+    "/",
+    "/chat",
+    "/materiais",
+    "/resumos",
+    "/quizzes",
+    "/desafios",
+    "/desempenho"
+  ],
+  "currentRoutesAlreadyPresent": true,
+  "sidebarPreviouslyFrom": 1024,
+  "change": "Show desktop sidebar from 768px; accessible mobile menu below 768px; retain all existing routes and stored state."
+}

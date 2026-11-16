@@ -1,0 +1,88 @@
+{
+  "scope": "Built web and API on one production Express process. No Vite server or proxy. No browser.",
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/chat",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/materiais",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/resumos",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/quizzes",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/desafios",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/desempenho",
+      "status": 200,
+      "scope": "Production HTML fallback; not rendered UI"
+    },
+    {
+      "route": "/brand/estudai-logo.svg",
+      "status": 200,
+      "scope": "Exact built official resource bytes"
+    },
+    {
+      "route": "/brand/estudai-symbol.svg",
+      "status": 200,
+      "scope": "Exact built official resource bytes"
+    },
+    {
+      "route": "/brand/estudai-sparkle.svg",
+      "status": 200,
+      "scope": "Exact built official resource bytes"
+    },
+    {
+      "route": "/favicon.svg",
+      "status": 200,
+      "scope": "Exact built official resource bytes"
+    },
+    {
+      "route": "/api/healthz",
+      "status": 200
+    },
+    {
+      "route": "/api/study/ai-status",
+      "status": 200
+    },
+    {
+      "route": "/api/does-not-exist",
+      "status": 404
+    },
+    {
+      "route": "/assets/missing.js",
+      "status": 404
+    },
+    {
+      "route": "/.env",
+      "status": 404
+    },
+    {
+      "route": "/assets/index-Ch5_x8Rt.js",
+      "status": 200
+    },
+    {
+      "route": "/assets/index-zP02mOx8.css",
+      "status": 200
+    }
+  ]
+}

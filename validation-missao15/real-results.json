@@ -1,0 +1,120 @@
+{
+  "scope": "Gemini real, mutationFn gerada e MutationObserver reais, via Express de producao, sem Vite. Sem automação visual e sem histórico do navegador.",
+  "results": [
+    {
+      "name": "resumo",
+      "status": 200,
+      "elapsedMs": 15184,
+      "result": {
+        "title": "Resumo Didático: Jardim Fictício Aurora",
+        "overview": "Este documento apresenta os conceitos fundamentais sobre o Jardim Fictício Aurora, detalhando a quantidade de vasos, a rotina de rega diária, o período de exposição à luz e a forma de registro dessas atividades.",
+        "sections": [
+          {
+            "heading": "Estrutura e Consumo de Água",
+            "explanation": "O Jardim Aurora é formado por 12 vasos no total. A rotina de manutenção estabelece que cada um desses vasos deve receber 200 ml de água por dia. Ao somar a quantidade distribuída para todos os vasos, o consumo diário alcança o total de 2400 ml de água."
+          },
+          {
+            "heading": "Iluminação e Controle",
+            "explanation": "Em relação aos cuidados diários, os vasos recebem luz no período da manhã. Para garantir o acompanhamento adequado das atividades, a rega diária é devidamente registrada em uma tabela."
+          }
+        ],
+        "keyTerms": [
+          {
+            "term": "Jardim Aurora",
+            "definition": "Jardim fictício composto por um conjunto de 12 vasos."
+          },
+          {
+            "term": "Rega diária",
+            "definition": "Aplicação diária de 200 ml de água em cada vaso, totalizando 2400 ml."
+          },
+          {
+            "term": "Tabela de registro",
+            "definition": "Ferramenta utilizada para anotar e registrar a rega diária dos vasos."
+          }
+        ],
+        "reviewTopics": [
+          "Quantidade de vasos presentes no Jardim Aurora",
+          "Volume de água aplicado por vaso e total diário",
+          "Turno do dia em que os vasos recebem luz",
+          "Forma de registro da rega diária"
+        ]
+      }
+    },
+    {
+      "name": "quiz",
+      "status": 200,
+      "elapsedMs": 20663,
+      "result": {
+        "title": "Quiz do Jardim Fictício Aurora",
+        "questions": [
+          {
+            "id": "1",
+            "type": "multipla-escolha",
+            "prompt": "Quantos vasos estão presentes no jardim fictício Aurora? (Um vaso é um recipiente utilizado para plantar vegetais).",
+            "options": [
+              "5 vasos",
+              "10 vasos",
+              "12 vasos",
+              "24 vasos"
+            ],
+            "correctAnswer": "12 vasos",
+            "explanation": "Conforme o material fornecido, o jardim Aurora possui exatamente 12 vasos.",
+            "topic": "Quantidade de vasos"
+          },
+          {
+            "id": "2",
+            "type": "verdadeiro-ou-falso",
+            "prompt": "Os vasos do jardim Aurora recebem luz no período da tarde.",
+            "options": [
+              "Verdadeiro",
+              "Falso"
+            ],
+            "correctAnswer": "Falso",
+            "explanation": "O texto afirma que os vasos recebem luz pela manhã, tornando a afirmação sobre o período da tarde incorreta.",
+            "topic": "Iluminação"
+          },
+          {
+            "id": "3",
+            "type": "multipla-escolha",
+            "prompt": "Qual a quantidade diária de água que cada vaso recebe? (A rega é o processo de fornecer água para suprir as necessidades das plantas).",
+            "options": [
+              "100 ml",
+              "200 ml",
+              "400 ml",
+              "2400 ml"
+            ],
+            "correctAnswer": "200 ml",
+            "explanation": "O texto indica que cada vaso individualmente recebe 200 ml de água por dia.",
+            "topic": "Rega individual"
+          },
+          {
+            "id": "4",
+            "type": "verdadeiro-ou-falso",
+            "prompt": "O total diário de água fornecido ao jardim é de 2400 ml.",
+            "options": [
+              "Verdadeiro",
+              "Falso"
+            ],
+            "correctAnswer": "Verdadeiro",
+            "explanation": "Multiplicando os 12 vasos pelos 200 ml diários de cada um, a rega diária totaliza 2400 ml.",
+            "topic": "Volume total de água"
+          },
+          {
+            "id": "5",
+            "type": "multipla-escolha",
+            "prompt": "O que é utilizado para registrar o acompanhamento da rega diária no jardim?",
+            "options": [
+              "Uma tabela",
+              "Um aplicativo",
+              "Um diário de papel",
+              "Um quadro negro"
+            ],
+            "correctAnswer": "Uma tabela",
+            "explanation": "De acordo com o material de estudo, uma tabela é o instrumento usado para registrar a rega diária.",
+            "topic": "Registro da rega"
+          }
+        ]
+      }
+    }
+  ]
+}

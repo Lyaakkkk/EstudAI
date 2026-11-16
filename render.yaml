@@ -1,0 +1,44 @@
+﻿# Free web/API; quota adapter approved. No resource is created by saving this file.
+services:
+  - type: web
+    name: estudai-web-api
+    runtime: node
+    plan: free
+    numInstances: 1
+    autoDeployTrigger: "off"
+    buildCommand: npx --yes pnpm@12.18.0 install --frozen-lockfile --prod=false && npx --yes pnpm@12.18.0 run build:web-api
+    startCommand: node --enable-source-maps artifacts/api-server/dist/index.mjs
+    healthCheckPath: /api/healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 26.13.0
+      - key: NODE_ENV
+        value: production
+      - key: SERVE_WEB
+        value: "true"
+      - key: TRUST_PROXY_HOPS
+        value: "1"
+      - key: AI_ENABLED
+        value: "false"
+      - key: AI_QUOTA_STORE
+        value: upstash
+      - key: AI_QUOTA_KEY
+        value: estudai:ai:quota:v1
+      - key: AI_DAILY_PROVIDER_LIMIT
+        value: "20"
+      - key: AI_DAILY_INPUT_BYTES
+        value: "8388608"
+      - key: AI_DAILY_OUTPUT_TOKENS
+        value: "65536"
+      - key: AI_PROVIDER_WINDOW_LIMIT
+        value: "6"
+      - key: AI_MAX_CONCURRENT
+        value: "1"
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false

@@ -1,0 +1,29 @@
+{
+  "scope": "Trechos reais finishQuiz e PerformancePage executados em VM; sem navegador, sem localStorage real. Quiz gerado pelo Gemini; respostas de teste deliberadas.",
+  "cases": [
+    {
+      "name": "todos corretos",
+      "score": 5,
+      "average": 100,
+      "passed": true
+    },
+    {
+      "name": "todos errados",
+      "score": 0,
+      "average": 0,
+      "passed": true
+    },
+    {
+      "name": "misto",
+      "score": 3,
+      "average": 60,
+      "passed": true
+    },
+    {
+      "name": "incompleto",
+      "score": null,
+      "average": null,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "passed": 5,
+  "scope": "Actual customFetch and extracted actual UI error formatters in VM. No browser rendering.",
+  "results": [
+    "AI_DAILY_LIMIT: ApiError retains code/status/retry; both UI formatters retain message",
+    "AI_WINDOW_LIMIT: ApiError retains code/status/retry; both UI formatters retain message",
+    "AI_BUDGET_UNAVAILABLE: ApiError retains code/status/retry; both UI formatters retain message",
+    "AI_DISABLED: ApiError retains code/status/retry; both UI formatters retain message",
+    "AI_BUSY: ApiError retains code/status/retry; both UI formatters retain message"
+  ]
+}

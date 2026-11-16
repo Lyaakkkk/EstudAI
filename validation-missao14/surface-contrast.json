@@ -1,0 +1,106 @@
+{
+  "priorIssue": {
+    "theme": "light",
+    "pair": "primary on secondary",
+    "ratio": 4.42
+  },
+  "correction": "Light primary uses official #1E40AF",
+  "rows": [
+    {
+      "mode": ":root {",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 13.32
+    },
+    {
+      "mode": ":root {",
+      "foreground": "card-foreground",
+      "background": "card",
+      "ratio": 13.32
+    },
+    {
+      "mode": ":root {",
+      "foreground": "secondary-foreground",
+      "background": "secondary",
+      "ratio": 11.4
+    },
+    {
+      "mode": ":root {",
+      "foreground": "muted-foreground",
+      "background": "muted",
+      "ratio": 5.06
+    },
+    {
+      "mode": ":root {",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 8.72
+    },
+    {
+      "mode": ":root {",
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 8.72
+    },
+    {
+      "mode": ":root {",
+      "foreground": "primary",
+      "background": "secondary",
+      "ratio": 7.45
+    },
+    {
+      "mode": ":root {",
+      "foreground": "accent-foreground",
+      "background": "accent",
+      "ratio": 7.4
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 14.68
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "card-foreground",
+      "background": "card",
+      "ratio": 12.53
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "secondary-foreground",
+      "background": "secondary",
+      "ratio": 10.55
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "muted-foreground",
+      "background": "muted",
+      "ratio": 7.54
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 6.99
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 6.72
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "primary",
+      "background": "secondary",
+      "ratio": 4.83
+    },
+    {
+      "mode": ".dark {",
+      "foreground": "accent-foreground",
+      "background": "accent",
+      "ratio": 9.49
+    }
+  ]
+}

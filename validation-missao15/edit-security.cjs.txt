@@ -1,0 +1,68 @@
+﻿const fs=require('fs');let f='artifacts/api-server/src/lib/gemini.ts',s=fs.readFileSync(f,'utf8');s="import { AiUsageError, guardedProviderFetch, withAiConcurrency } from './ai-guard';\n"+s;s=s.replace('export async function generateGeminiJson<T>(','export function generateGeminiJson<T>(prompt: string, source: StudySource, responseSchema: GeminiJsonSchema): Promise<T> {\n  return withAiConcurrency(() => generateGeminiJsonRequest<T>(prompt, source, responseSchema));\n}\n\nasync function generateGeminiJsonRequest<T>(');s=s.replace('export async function generateGeminiChat(','export function generateGeminiChat(systemInstruction: string, messages: ChatTurn[], source?: StudySource): Promise<string> {\n  return withAiConcurrency(() => generateGeminiChatRequest(systemInstruction, messages, source));\n}\n\nasync function generateGeminiChatRequest(');
+s=s.replaceAll('fetch(url, {','guardedProviderFetch(url, {');s=s.replaceAll('  } catch (error) {\n    logger.warn(','  } catch (error) {\n    if (error instanceof AiUsageError) throw error;\n    logger.warn(').replaceAll('  } catch (error) {\r\n    logger.warn(','  } catch (error) {\r\n    if (error instanceof AiUsageError) throw error;\r\n    logger.warn(');
+s=s.replaceAll('(await response.json()) as GeminiResponse','(await readProviderJson(response)) as GeminiResponse');
+s+=__BT__
+/** Bound provider response allocation even when the upstream is malformed. */
+async function readProviderJson(response: Response): Promise<unknown> {
+  const limit = 1024 * 1024;
+  if (Number(response.headers.get('content-length')) > limit) { await response.body?.cancel(); throw new GeminiResponseError(); }
+  const reader = response.body?.getReader();
+  if (!reader) throw new GeminiResponseError();
+  let bytes = 0; const chunks: Uint8Array[] = [];
+  try {
+    while (true) {
+      const part = await reader.read();
+      if (part.done) break;
+      bytes += part.value.byteLength;
+      if (bytes > limit) { await reader.cancel(); throw new GeminiResponseError(); }
+      chunks.push(part.value);
+    }
+    return JSON.parse(Buffer.concat(chunks).toString('utf8'));
+  } finally { reader.releaseLock(); }
+}
+__BT__;fs.writeFileSync(f,s);
+f='artifacts/api-server/src/routes/study.ts';s=fs.readFileSync(f,'utf8');s="import { AiUsageError } from '../lib/ai-guard';\n"+s;
+s=s.replace('    bucket.count += 1;',__BT__    if (!existing && requestsByClient.size >= 5000) {
+      for (const [key, value] of requestsByClient) if (value.resetsAt <= now) requestsByClient.delete(key);
+      if (requestsByClient.size >= 5000) {
+        res.setHeader('Retry-After', '60');
+        res.status(503).json({ code: 'AI_BUSY', message: 'O assistente está ocupado. Tente novamente em instantes.' });
+        return;
+      }
+    }
+    bucket.count += 1;__BT__);
+s=s.replace('router.use("/study", (req, res, next): void => {',__BT__router.use("/study", (req, res, next): void => {
+  if (req.method !== 'POST' || !['/chat', '/summaries', '/quizzes', '/challenges', '/challenges/grade'].includes(req.path)) { next(); return; }__BT__);
+const a=s.indexOf('function validateStudySource('),b=s.indexOf('function difficultyDescription(',a);s=s.slice(0,a)+__BT__function validateStudySource(source: { text?: string; file?: { name?: string; mimeType?: string; base64: string } }): string | null {
+  if (!source.text?.trim() && !source.file) return 'Adicione texto ou um arquivo antes de continuar.';
+  if (source.text && source.text.length > 100000) return 'O texto deve ter no máximo 100.000 caracteres.';
+  if (!source.file) return null;
+  const file = source.file;
+  if (!file.base64 || file.base64.length > 2796204 || !/^[A-Za-z0-9+/]+={0,2}$/.test(file.base64) || file.base64.length % 4 !== 0) return 'O arquivo enviado está em um formato inválido ou excede 2 MB.';
+  if (file.name && file.name.length > 255) return 'O nome do arquivo é muito longo.';
+  const bytes = Buffer.from(file.base64, 'base64');
+  if (bytes.length > 2 * 1024 * 1024 || bytes.toString('base64') !== file.base64) return 'O arquivo enviado está em um formato inválido ou excede 2 MB.';
+  const signature = file.mimeType === 'application/pdf' ? bytes.subarray(0,5).toString() === '%PDF-'
+    : file.mimeType === 'image/png' ? bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))
+    : file.mimeType === 'image/jpeg' ? bytes.subarray(0,3).equals(Buffer.from([255,216,255]))
+    : file.mimeType === 'image/webp' ? bytes.subarray(0,4).toString() === 'RIFF' && bytes.subarray(8,12).toString() === 'WEBP' : false;
+  return signature ? null : 'O conteúdo do arquivo não corresponde ao formato informado.';
+}
+
+__BT__+s.slice(b);
+s=s.replace('function sendAiError(req: Request, res: Response, error: unknown): void {',__BT__function sendAiError(req: Request, res: Response, error: unknown): void {
+  if (error instanceof AiUsageError) {
+    res.setHeader('Retry-After', String(error.retryAfter));
+    res.status(error.status).json({ code: error.code, message: error.message });
+    return;
+  }__BT__);
+fs.writeFileSync(f,s);
+f='artifacts/api-server/src/app.ts';s=fs.readFileSync(f,'utf8').replace('import express, { type Express }','import express, { type Express, type ErrorRequestHandler }').replace('limit: "12mb"','limit: "3mb"');s=s.replace('mountWeb(app);',__BT__mountWeb(app);
+const safeErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+  if (res.headersSent) { next(error); return; }
+  const status = error?.type === 'entity.too.large' ? 413 : error?.type === 'entity.parse.failed' ? 400 : 500;
+  if (status === 500) req.log.error({ errorName: error instanceof Error ? error.name : 'unknown' }, 'Unhandled request error');
+  res.status(status).json({ code: status === 413 ? 'PAYLOAD_TOO_LARGE' : status === 400 ? 'INVALID_JSON' : 'INTERNAL_ERROR',
+    message: status === 413 ? 'O envio excedeu o limite permitido.' : status === 400 ? 'O formato do pedido é inválido.' : 'Não foi possível concluir a solicitação.' });
+};
+app.use(safeErrorHandler);__BT__);fs.writeFileSync(f,s);

@@ -1,0 +1,310 @@
+{
+  "pageComponentsAndLogicUnchangedSinceMission11": true,
+  "chatMarkupAndLogicUnchanged": true,
+  "mobileIdenticalToOriginal": true,
+  "exactLogoPathsAndGradients": true,
+  "sourceKitSha256": "8bd08d2114981a983b8e6235d58affd84230163411d7cadd5a067d6173f119ca",
+  "backupKitSha256": "8bd08d2114981a983b8e6235d58affd84230163411d7cadd5a067d6173f119ca",
+  "webComparison": [
+    {
+      "file": "artifacts\\estudai-web\\.replit-artifact\\artifact.toml",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\components.json",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\index.html",
+      "identical": false
+    },
+    {
+      "file": "artifacts\\estudai-web\\package.json",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\public\\favicon.svg",
+      "identical": false
+    },
+    {
+      "file": "artifacts\\estudai-web\\public\\robots.txt",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\App.tsx",
+      "identical": false
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\error-boundary.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\materials-ui.tsx",
+      "identical": false
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\accordion.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\alert-dialog.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\alert.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\aspect-ratio.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\avatar.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\badge.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\breadcrumb.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\button-group.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\button.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\calendar.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\card.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\carousel.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\chart.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\checkbox.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\collapsible.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\command.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\context-menu.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\dialog.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\drawer.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\dropdown-menu.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\empty.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\field.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\form.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\hover-card.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\input-group.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\input-otp.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\input.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\item.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\kbd.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\label.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\menubar.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\navigation-menu.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\pagination.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\popover.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\progress.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\radio-group.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\resizable.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\scroll-area.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\select.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\separator.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\sheet.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\sidebar.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\skeleton.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\slider.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\sonner.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\spinner.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\switch.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\table.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\tabs.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\textarea.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\toast.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\toaster.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\toggle-group.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\toggle.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\components\\ui\\tooltip.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\hooks\\use-mobile.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\hooks\\use-toast.ts",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\index.css",
+      "identical": false
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\lib\\tags.ts",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\lib\\theme.ts",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\lib\\utils.ts",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\main.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\pages\\chat.tsx",
+      "identical": false
+    },
+    {
+      "file": "artifacts\\estudai-web\\src\\pages\\not-found.tsx",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\tsconfig.json",
+      "identical": true
+    },
+    {
+      "file": "artifacts\\estudai-web\\vite.config.ts",
+      "identical": true
+    }
+  ]
+}

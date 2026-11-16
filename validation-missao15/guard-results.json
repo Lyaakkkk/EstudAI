@@ -1,0 +1,17 @@
+{
+  "scope": "Actual guard source; real filesystem ledgers, simulated provider, no real key.",
+  "passed": 11,
+  "results": [
+    "Daily counter survives module/process-style restart and denies before fetch",
+    "Reserved maximum output tokens have a daily cap",
+    "Daily request-byte cap denies before fetch",
+    "Global fixed window blocks further provider attempts",
+    "New UTC day renews the persistent quota",
+    "Corrupt ledger fails closed",
+    "I/O failure returns a safe message without paths",
+    "Concurrency cap and release on success",
+    "Concurrency slot releases after error",
+    "Invalid output-token configuration is rejected before spending",
+    "Invalid safety configuration fails startup"
+  ]
+}

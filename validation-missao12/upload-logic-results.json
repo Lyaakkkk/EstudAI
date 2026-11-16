@@ -1,0 +1,30 @@
+{
+  "scope": "Funcao addFile real, FileReader substituido apenas para leitura em Node; nao comprova seletor/armazenamento do navegador.",
+  "results": [
+    {
+      "name": "PDF ficticio",
+      "passed": true,
+      "message": "Arquivo lido e material pendente criado"
+    },
+    {
+      "name": "PNG ficticio",
+      "passed": true,
+      "message": "Arquivo lido e material pendente criado"
+    },
+    {
+      "name": "formato HEIC",
+      "passed": true,
+      "message": "Formato não aceito. Use PDF, JPG, PNG ou WebP."
+    },
+    {
+      "name": "arquivo acima de 2 MB",
+      "passed": true,
+      "message": "O arquivo deve ter até 2 MB para caber no armazenamento local."
+    },
+    {
+      "name": "limite total de armazenamento",
+      "passed": true,
+      "message": "Remova um arquivo antigo antes de adicionar outro para manter espaço no armazenamento local."
+    }
+  ]
+}

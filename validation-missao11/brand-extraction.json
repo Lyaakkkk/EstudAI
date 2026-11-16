@@ -1,0 +1,18 @@
+{
+  "source": "C:/Users/NegroGay123/Downloads/EstudAI sgv",
+  "sha256": "8bd08d2114981a983b8e6235d58affd84230163411d7cadd5a067d6173f119ca",
+  "svgViewBox": "0 0 1536 1024",
+  "group": "translate(280 4)",
+  "logoPaths": 35,
+  "symbolPaths": [
+    0,
+    1,
+    29,
+    30
+  ],
+  "sparklePaths": [
+    29,
+    30
+  ],
+  "method": "Exact path and gradient extraction; no redraw"
+}

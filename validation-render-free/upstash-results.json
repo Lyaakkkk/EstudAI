@@ -1,0 +1,25 @@
+{
+  "scope": "Actual REST adapter and guard with mocked fetch. No account/credentials connected; Lua was inspected but not executed on a live Redis.",
+  "passed": 17,
+  "redisRequests": 13,
+  "geminiRequests": 1,
+  "results": [
+    "REST destination validation prevents unexpected hosts, credentials and redirects",
+    "One EVAL atomically reserves call, bytes, output and shared window",
+    "Maps Redis decision paused",
+    "Maps Redis decision daily",
+    "Maps Redis decision window",
+    "Maps Redis decision unavailable",
+    "Provider quota/error is fail-closed and does not leak raw body",
+    "Malformed success response blocks",
+    "Invalid TTL blocks",
+    "Oversized REST response blocks",
+    "Connection/timeout-style failure blocks without retry",
+    "HTTP 429 from free service blocks",
+    "Missing credentials cause no network request",
+    "Gemini is called only after confirmed remote reservation",
+    "Remote global stop blocks Gemini; short denial cache reduces free commands",
+    "Environment global stop blocks before Redis and before operation",
+    "Missing key cannot initialize/reset/enable itself; persistent state has no TTL"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "Real existing sendStudyChat client and Gemini API, actual frontend hook/Home actions in a simulated hook runner; no browser or real localStorage.",
+  "reply": "Cada um dos 12 vasos precisa receber 200 ml de água individualmente. Ao multiplicarmos a quantidade de vasos pelo volume de água que cada um necessita (12 vezes 200 ml), encontramos o total de 2400 ml.",
+  "elapsedMs": 4148,
+  "requestCount": 1,
+  "route": "/chat",
+  "messages": [
+    {
+      "id": "1794702372682-rle1af",
+      "role": "user",
+      "content": "Explique em duas frases por que 12 vasos com 200 ml cada precisam de 2400 ml de agua.",
+      "createdAt": "2026-11-15T00:26:12.682Z"
+    },
+    {
+      "id": "1794702376830-og0opg",
+      "role": "assistant",
+      "content": "Cada um dos 12 vasos precisa receber 200 ml de água individualmente. Ao multiplicarmos a quantidade de vasos pelo volume de água que cada um necessita (12 vezes 200 ml), encontramos o total de 2400 ml.",
+      "createdAt": "2026-11-15T00:26:16.830Z"
+    }
+  ],
+  "pending": false,
+  "restoredCount": 2,
+  "passed": true
+}

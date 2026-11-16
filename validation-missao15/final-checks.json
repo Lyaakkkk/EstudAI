@@ -1,0 +1,14 @@
+{
+  "blueprintParsed": true,
+  "persistentDiskConfigured": true,
+  "oneInstance": true,
+  "autoDeployDisabled": true,
+  "keyAbsentFromWebBundle": true,
+  "noEnvFilesInPublic": true,
+  "lightIdenticalToOriginal": true,
+  "darkIdenticalToSuppliedSvg": true,
+  "logoGeometryPreserved": true,
+  "logoTransparent": true,
+  "retryAttemptsChargedToLedger": true,
+  "regressionProviderAttempts": 14
+}

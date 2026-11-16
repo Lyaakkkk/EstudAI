@@ -1,0 +1,9 @@
+{
+  "freeBlueprintParsed": true,
+  "noPersistentDisk": true,
+  "offByDefault": true,
+  "adminCommandsInspectedOnly": true,
+  "officialSvgHashesPreserved": true,
+  "noLiveRedisConnection": true,
+  "noLinuxAvailable": true
+}

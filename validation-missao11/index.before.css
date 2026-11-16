@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-success: hsl(var(--success));
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --font-sans: var(--app-font-sans);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 21% 19%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 21% 19%;
+  --border: 60 3% 88%;
+  --input: 60 2% 81%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 93%;
+  --secondary-foreground: 210 21% 19%;
+  --muted: 60 3% 94%;
+  --muted-foreground: 198 13% 39%;
+  --accent: 250 100% 95.9%;
+  --accent-foreground: 225.9 70.7% 40.2%;
+  --destructive: 3 71% 42%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 199 17% 30%;
+  --ring: 221.2 83.2% 53.3%;
+  --sidebar: 225.9 70.7% 40.2%;
+  --sidebar-foreground: 60 8% 95%;
+  --sidebar-accent: 258.3 89.5% 66.3%;
+  --radius: 1.25rem;
+  --app-font-sans: 'Outfit', system-ui, sans-serif;
+  --app-font-display: 'Outfit', system-ui, sans-serif;
+  --shadow-soft: 0 10px 34px -18px hsl(210 21% 19% / .32);
+  color-scheme: light;
+}
+
+.dark {
+  --background: 210 24% 11%;
+  --foreground: 0 0% 93%;
+  --card: 207 24% 16%;
+  --card-foreground: 0 0% 93%;
+  --border: 206 19% 25%;
+  --input: 206 16% 32%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 209 21% 21%;
+  --secondary-foreground: 0 0% 93%;
+  --muted: 208 24% 14%;
+  --muted-foreground: 199 12% 70%;
+  --accent: 258 35% 23%;
+  --accent-foreground: 250 100% 91%;
+  --destructive: 2 83% 65%;
+  --destructive-foreground: 210 24% 11%;
+  --success: 191 28% 71%;
+  --ring: 258.3 89.5% 66.3%;
+  --sidebar: 207 26% 8%;
+  --sidebar-foreground: 0 0% 93%;
+  --sidebar-accent: 258.3 89.5% 66.3%;
+  --shadow-soft: 0 10px 34px -18px hsl(0 0% 0% / .7);
+  color-scheme: dark;
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground antialiased; font-family: var(--app-font-sans); transition: background-color .25s ease, color .25s ease; }
+  button, input, textarea, select { font: inherit; }
+  button { cursor: pointer; }
+}
+
+.font-display { font-family: var(--app-font-display); font-weight: 600; letter-spacing: -0.01em; }
+.shadow-soft { box-shadow: var(--shadow-soft); }
+.app-shell { min-height: 100dvh; }
+.sidebar-link { transition: background-color .18s ease, color .18s ease, transform .18s ease; }
+.sidebar-link:hover { transform: translateX(2px); }
+.page-enter { animation: page-in .35s ease both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.skeleton { background: linear-gradient(90deg, hsl(var(--muted)) 20%, hsl(var(--secondary)) 45%, hsl(var(--muted)) 70%); background-size: 220% 100%; animation: shimmer 1.5s ease infinite; }
+@keyframes shimmer { to { background-position-x: -220%; } }
+.grain::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .05; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E"); }
+
+/* Transição entre páginas (a caixa de conversa "viaja" da início para o Chat) */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .32s; animation-timing-function: ease; }
+::view-transition-group(chat-composer) { animation-duration: .5s; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root), ::view-transition-group(chat-composer) { animation: none; }
+}

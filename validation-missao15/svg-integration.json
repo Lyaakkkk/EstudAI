@@ -1,0 +1,15 @@
+{
+  "archive": "C:/Users/NegroGay123/Downloads/svg dark",
+  "extractedOnly": [
+    "estudai-logo-dark.svg",
+    "estudai-icon-dark.svg"
+  ],
+  "logoDarkSha256": "c71e06dd1073c529b71f205c9550cbc09e378d1f373815c5aa2638522cb6da8f",
+  "iconDarkSha256": "06adaa2e67d358f6cce092563e696f9272921cfed7f210fa9ce1b219299225e5",
+  "lightLogoUnchanged": true,
+  "darkLogoGeometryIdenticalToOriginal": true,
+  "transparent": true,
+  "sparkle": "Paths 29/30 and defs extracted without redraw from supplied dark SVG",
+  "favicon": "Resolved theme controls supplied dark icon / original light symbol",
+  "otherBrandsExtracted": false
+}

@@ -1,0 +1,95 @@
+{
+  "scope": "Real Gemini via production HTTP; fictional material, no browser or user storage.",
+  "results": [
+    {
+      "name": "PDF summary",
+      "status": 200,
+      "elapsedMs": 7106,
+      "data": {
+        "title": "Jardim Fictício Aurora",
+        "overview": "Resumo didático sobre as especificações do Jardim fictício Aurora, cobrindo a quantidade de vasos e a rotina diária de rega.",
+        "sections": [
+          {
+            "heading": "Composição do Jardim",
+            "explanation": "O Jardim fictício Aurora é constituído por um total de 12 vasos."
+          },
+          {
+            "heading": "Rotina de Irrigação",
+            "explanation": "A rega é realizada diariamente, sendo que cada vaso individual recebe 200 ml de água por dia."
+          }
+        ],
+        "keyTerms": [
+          {
+            "term": "Jardim fictício Aurora",
+            "definition": "Local fictício de estudo composto por 12 vasos."
+          },
+          {
+            "term": "Vaso",
+            "definition": "Unidade do jardim que recebe a quantia diária de 200 ml de água."
+          }
+        ],
+        "reviewTopics": [
+          "Quantidade total de vasos contidos no Jardim fictício Aurora",
+          "Volume diário de água fornecido para cada vaso"
+        ]
+      }
+    },
+    {
+      "name": "Challenges",
+      "status": 200,
+      "elapsedMs": 13408,
+      "data": {
+        "title": "Desafios Práticos do Jardim Aurora",
+        "challenges": [
+          {
+            "id": "desafio-1",
+            "title": "Cálculo do Consumo Diário de Água",
+            "type": "resolucao-de-problemas",
+            "prompt": "O Jardim Aurora tem 12 vasos e cada vaso recebe 200 ml de água por dia. Defina o conceito de rega diária e resolva o problema calculando o volume total de água necessário para o jardim em um dia.",
+            "rubric": [
+              "Define rega diária como a quantidade de água disponibilizada por dia para cada vaso.",
+              "Identifica a quantidade de 12 vasos e a cota de 200 ml por vaso.",
+              "Calcula corretamente o total de 2400 ml de água por dia."
+            ],
+            "expectedAnswer": "A rega diária refere-se à quantidade diária de água que cada vaso recebe para sua manutenção. No Jardim Aurora, como há 12 vasos e cada um recebe 200 ml de água por dia, a quantidade total necessária é calculada multiplicando 12 por 200 ml, resultando em 2400 ml de água por dia.",
+            "topic": "Cálculo de Irrigação"
+          },
+          {
+            "id": "desafio-2",
+            "title": "Registro de Rega e Período de Luz",
+            "type": "resolucao-de-problemas",
+            "prompt": "No Jardim Aurora, os 12 vasos precisam de cuidados específicos. Explique o conceito de registro diário de rega e resolva o problema identificando em qual período do dia os vasos recebem luz e onde a rega diária deve ser anotada.",
+            "rubric": [
+              "Define registro diário de rega como o acompanhamento anotado das irrigações.",
+              "Identifica que os vasos recebem luz pela manhã.",
+              "Afirma que a rega diária é registrada em uma tabela."
+            ],
+            "expectedAnswer": "O registro diário de rega é a anotação contínua da irrigação feita nos vasos para acompanhamento. Os 12 vasos do Jardim Aurora recebem luz pela manhã e a rega diária deve ser registrada em uma tabela.",
+            "topic": "Gestão de Iluminação e Registro"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Challenge grade",
+      "status": 200,
+      "elapsedMs": 5781,
+      "data": {
+        "score": 67,
+        "evaluation": "Você identificou corretamente a quantidade de vasos (12) e a cota de água por vaso (200 ml), realizando o cálculo correto do volume total diário (2400 ml ou 2,4 litros). No entanto, não apresentou a definição do conceito de rega diária solicitado no desafio, que consiste na quantidade de água disponibilizada por dia para a manutenção de cada vaso.",
+        "strengths": [
+          "Identificou corretamente a quantidade de 12 vasos e a cota de 200 ml por vaso.",
+          "Calculou com precisão o volume total de 2400 ml (2,4 litros) de água por dia."
+        ],
+        "improvements": [
+          "Incluir explicitamente a definição do conceito de rega diária conforme solicitado no enunciado do problema."
+        ],
+        "expectedAnswer": "A rega diária refere-se à quantidade diária de água que cada vaso recebe para sua manutenção. No Jardim Aurora, como há 12 vasos e cada um recebe 200 ml de água por dia, a quantidade total necessária é calculada multiplicando 12 por 200 ml, resultando em 2400 ml de água por dia.",
+        "topicsToReview": [
+          "Conceito de rega diária",
+          "Interpretação e atendimento completo aos comandos do enunciado"
+        ]
+      }
+    }
+  ]
+}

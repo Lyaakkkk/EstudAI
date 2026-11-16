@@ -1,0 +1,57 @@
+{
+  "scope": "Actual hook and Home action source transpiled into a minimal hook/state harness; simulated React scheduling, localStorage and provider callbacks. No DOM/browser claims.",
+  "results": [
+    {
+      "name": "Home sends once, appends user immediately and navigates through transition",
+      "passed": true
+    },
+    {
+      "name": "Clear during pending cannot orphan the active response",
+      "passed": true
+    },
+    {
+      "name": "Response appends to the same session after route child changes",
+      "passed": true
+    },
+    {
+      "name": "Existing storage key restores conversation in a fresh hook instance (simulated localStorage)",
+      "passed": true
+    },
+    {
+      "name": "Error unlocks send; repeated retry issues one request without duplicating user",
+      "passed": true
+    },
+    {
+      "name": "Unconfigured, empty and oversized sends are rejected",
+      "passed": true
+    },
+    {
+      "name": "Open Chat without message does not call Gemini",
+      "passed": true
+    },
+    {
+      "name": "Navigation fallback: unsupported",
+      "passed": true
+    },
+    {
+      "name": "Navigation fallback: reduced",
+      "passed": true
+    },
+    {
+      "name": "Navigation fallback: throws",
+      "passed": true
+    },
+    {
+      "name": "Navigation fallback: rejects",
+      "passed": true
+    },
+    {
+      "name": "Storage failure is visible without discarding live conversation",
+      "passed": true
+    },
+    {
+      "name": "Materials, summaries, quizzes, challenges and performance code unchanged",
+      "passed": true
+    }
+  ]
+}

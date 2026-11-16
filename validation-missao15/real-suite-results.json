@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "scope": "Six real Gemini requests on isolated production build. Browser unavailable; no manual UI claims.",
+  "executions": [
+    {
+      "file": "real.cjs",
+      "exitCode": 0
+    },
+    {
+      "file": "functional-http.mjs",
+      "exitCode": 0
+    },
+    {
+      "file": "real-chat.cjs",
+      "exitCode": 0
+    }
+  ],
+  "results": [
+    {
+      "name": "resumo",
+      "status": 200,
+      "elapsedMs": 15184
+    },
+    {
+      "name": "quiz",
+      "status": 200,
+      "elapsedMs": 20663
+    },
+    {
+      "name": "PDF summary",
+      "status": 200,
+      "elapsedMs": 9484
+    },
+    {
+      "name": "Challenges",
+      "status": 200,
+      "elapsedMs": 16792
+    },
+    {
+      "name": "Challenge grade",
+      "status": 200,
+      "elapsedMs": 15917
+    }
+  ],
+  "chat": {
+    "passed": true,
+    "status": 200,
+    "elapsedMs": 5147,
+    "requestCount": 1
+  }
+}
